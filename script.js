@@ -1001,4 +1001,139 @@ function lasttWord(f) {
   console.log(array);
   }
   bubleSort()
+
   
+
+
+  // program 45
+// Write a JavaScript program which returns a subset of a string.   
+// Sample Data: dog
+// Expected Output: ["d", "do", "dog", "o", "og", "g"]
+
+function subset() {
+    var string='Dogs'
+    var array=[]
+    for(let x=0;x<string.length;x++){
+      for(let y=x+1;y<=string.length;y++){
+          array.push(string.slice(x,y))
+        }
+      }
+      console.log("Subset Of Given String Is:",array);
+  }
+  subset()
+  
+  
+  // program 46
+  // Write a JavaScript program to create a Clock.   
+  // Note: The output will come every second.
+  
+  // function clock() {
+  //   var d= Date.now()
+  //   // var m=d.getMinutes()
+  //   // var h=d.getHours()
+  //   // var s=d.getSeconds()
+    
+  //   console.log(d);
+    
+  // }clock()
+  
+  
+  // program 47
+  // Write a JavaScript program to calculate the area and perimeter of a circle.   
+  // Note : Create two methods to calculate the area and perimeter. The radius of the circle will be supplied by the user.
+  
+  function Areapara(r) {
+    var area=Math.PI*r*r
+    var para=Math.PI*2*r
+    console.log("Parimeter Of Circle:",para.toFixed(5));
+    console.log("Area Of Circle:",area.toFixed(5))
+    
+  }
+  Areapara(10)
+  
+  
+  // program 48
+  // Write a JavaScript function to print all the methods in an JavaScript object.
+  
+  function objectname(any) {
+    return Object.getOwnPropertyNames(any)
+    
+  }
+  console.log(objectname(Array));
+  
+  // program 49
+  // Write a JavaScript function to retrieve all the values of an object's properties.
+  function allValue() {
+    var object1={
+      name:'Usama',
+      fatherName:'Azam',
+      class:'BsCs',
+      rollno:11931,
+    }
+    console.log(Object.values(object1));
+  }
+  allValue()
+  
+  // program 50
+  // Write a JavaScript function to check whether an object contains given property. 
+   function property(obj) {
+     student={
+       sName:'M.Usama',
+       sFatherName:'M.Azam',
+       class:"BsCs",
+       section:"Evening",
+       rollno:"11931"
+     }
+     if (student.hasOwnProperty(obj)) {
+       console.log("Student Object Has This Property");
+     }
+     else{
+      console.log("Student Object Has Not This Property");
+  
+     }
+  
+   }
+   property('class')
+  
+  
+  //                            Conditional Operator
+  
+  // program 1
+  // Write a js program to find maximum between two numbers using conditional operator
+  function greaterC_O() {
+    var num1=12
+  var num2=22
+  var greater=num1>num2 ? num1+" Is Greater" : num2+" Is Greater"
+  console.log(greater);
+  }
+  greaterC_O()
+  
+  
+  // program 2
+  // Write a js program to find maximum between three numbers using conditional operator.
+  function greater3C_O(){
+    var num1=20
+    var num2=19
+    var num3=21
+     var number1=num1>num2?num2>num3? num1+" is greater":num3+" is greater":num2+" is greater"
+     console.log(number1);
+  }
+  greater3C_O()
+  
+  // program 3
+  // Write a js program to check whether a number is even or odd using conditional operator.
+  function checkC_O() {
+    var num1=45
+    var chek=num1%2==0?num1+" is even":num1+" is odd"
+    console.log(chek);
+  }
+  checkC_O()
+  
+  // program 4
+  // Write a js program to check whether year is leap year or not using conditional operator.
+  function leapYear() {
+    var num1=11
+    var chek=num1%4==0?num1+" is leap year":num1+" is not a leap year"
+    console.log(chek);
+  }
+  leapYear()
