@@ -655,3 +655,350 @@ function allAccur(char) {
     }
   }
   firstWord("I")
+
+
+
+  // program 29
+// Write a js program to find last occurrence of a word in a given string.
+function lasttWord(f) {
+    var string='I Love My Country Pakistan'
+   var array=string.split(" ")
+   var yess=0
+    for(let x=array.length-1;x>=0;x--){
+           if (array[x]==f) {
+             x++
+             console.log(f," Is Found At Position",x);
+             yess++
+             break
+           }
+    }
+    if (yess==0) {
+      
+      console.log("Given Word Is Not Found In STring");
+    }
+  }
+  lasttWord("Country")
+  
+  
+  // program 30
+  // Write a js program to search all occurrences of a word in given string.
+  
+  function allWord(word) {
+    var string='i Love My Country i Pakistan'
+   var array=string.split(" ")
+   var index=[]
+   var yess=0
+    for(let x=0;x<array.length;x++){
+           if (array[x]==word) {
+            index.push(x)
+             yess++
+            }
+          }
+  
+          if (yess>0) {
+      console.log(word," Is Found At Index",index); 
+       }
+       else{
+         console.log("Given Word Is Not Found In String");
+       }
+  }
+  allWord("i")
+  
+  // program 31
+  // Write a js program to count occurrences of a word in a given string.
+  function countWord(word) {
+    var string='i Love My Country i Pakistan'
+   var array=string.split(" ")
+   var index=[]
+   var yess=0
+    for(let x=0;x<array.length;x++){
+           if (array[x]==word) {
+             yess++
+            }
+          }
+  
+          if (yess>0) {
+      console.log(word," Is Occur",yess,"Times"); 
+       }
+       else{
+         console.log("Given Word Is Not Found In String");
+       }
+  }
+  countWord("i")
+  
+  
+  // program 32
+  // Write a js program to remove first occurrence of a word from string.
+  function removeWord(word) {
+    var string='i Love My Country i Pakistan'
+   var array=string.split(" ")
+   var yess=0
+    for(let x=0;x<array.length;x++){
+           if (array[x]==word) {
+             array.splice(x,1)
+             yess++
+             break
+            }
+          }
+        var news=array.join(" ")
+          if (yess>0) {
+      console.log("After Removing from first",word, "Word:",news); 
+       }
+       else{
+         console.log("Given Word Is Not Found In String");
+       }
+  }
+  removeWord("i")
+  
+  
+  // program 33
+  // Write a js program to remove last occurrence of a word from string.
+  function removeLast(word) {
+    var string='i Love My Country i Pakistan'
+   var array=string.split(" ")
+   var yess=0
+    for(let x=array.length-1;x>=0;x--){
+           if (array[x]==word) {
+             array.splice(x,1)
+             yess++
+             break
+            }
+          }
+        var news=array.join(" ")
+          if (yess>0) {
+      console.log("After Removing from last",word, "Word:",news); 
+       }
+       else{
+         console.log("Given Word Is Not Found In String");
+       }
+  }
+  removeLast("Pakistan")
+  
+  
+  
+  // program 34
+  // Write a js program to remove all occurrence of a word in given string
+  function allOccur(word) {
+    var string='i Love My Country i Pakistan'
+   var array=string.split(" ")
+   var yess=0
+    for(let x=array.length-1;x>=0;x--){
+           if (array[x]==word) {
+             array.splice(x,1)
+             yess++
+            }
+          }
+        var news=array.join(" ")
+          if (yess>0) {
+      console.log("After Removing All",word, "Words:",news); 
+       }
+       else{
+         console.log("Given Word Is Not Found In String");
+       }
+  }allOccur("i")
+  
+  
+  // program 35
+  // Write a js program to trim leading white space characters from given string.
+  function trimSpace() {
+    var string='       I love my country pakistan'
+    var array=string.split(" ")
+    for(let x=0;x<array.length;x++){
+      if (array[x]=="") {
+        array.shift()  
+        x--    
+      }
+      
+    }
+    var news=array.join(" ")
+    console.log("After Removing Leading space:",news);
+    
+  }
+  trimSpace()
+  
+  
+  // program 36
+  // Write a js program to trim trailing white space characters from given string.
+  function trailingSpace() {
+    var string='       I love my country pakistan      '
+    var array=string.split(" ")
+    for(let x=0;x<array.length;x++){
+      if (array[array.length-1]=="") {
+        array.pop()     
+      }
+      
+    }
+    var news=array.join(" ")
+    console.log("After Removing Trailing space:",news);
+    
+  }
+  trailingSpace()
+  
+  // program 37
+  // Write a js program to trim both leading and trailing white space characters from given string.
+   function trimBoth() {
+     var string='    I love my country pakistan      '
+     var news=string.trim()
+     console.log("After Removing Leading And Trailing White Space:",news);
+     
+   }
+   trimBoth()
+  
+  //  program 38
+  // Write a js program to remove all extra blank spaces from given string.
+  function extraSpace() {
+    var string='    I love Pakistan   is my country   '
+    var news=string.trim()
+    var array=news.split(" ")
+    for(let x=0;x<array.length;x++){
+  
+      if (array[x]=="") {
+        array.splice(x,1)
+        x--
+      }
+    }
+    var result=array.join(" ")
+    console.log("After Removing All Extra White Space:",result);
+    
+  }
+  extraSpace()
+  
+                                // object 
+  
+  // program 39
+  // Write a JavaScript program to list the properties of a JavaScript object
+  // var student = {
+  // name : "David Rayy",
+  // sclass : "VI",
+  // rollno : 12 };
+  // Sample Output: name,sclass,rollno
+  
+  function properties() {
+    var student={
+      name:"David Rayy",
+      sclass:"VI",
+      rollno:12,
+    };
+    var news=Object.keys(student).join(",")
+    console.log("Output",news);
+    
+  }
+  properties()
+  
+  
+  // program 40
+  // Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+  // Sample object:
+  // var student = {
+  // name : "David Rayy",
+  // sclass : "VI",
+  // rollno : 12 };
+  
+  function deleteobj() {
+    var student={
+      name:"David Rayy",
+      sclass:"VI",
+      rollno:12,
+    };
+    console.log("Before Deletion",student);
+    delete student.rollno
+    console.log("After Deletion",student);
+    
+  }
+  deleteobj()
+  
+  
+  // program 41
+  // Write a JavaScript program to get the length of a JavaScript object.   
+  // Sample object :
+  // var student = {
+  // name : "David Rayy",
+  // sclass : "VI",
+  // rollno : 12 };
+  
+  function lengthobj() {
+    var student = {
+      name : "David Rayy",
+      sclass : "VI",
+      rollno : 12 };
+      var key=Object.keys(student)
+      console.log("length Of object Is:",key.length);
+  }
+  lengthobj()
+  
+  // program 42
+  // Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.   
+  // var library = [ 
+  //    {
+  //        author: 'Bill Gates',
+  //        title: 'The Road Ahead',
+  //        readingStatus: true
+  //    },
+  //    {
+  //        author: 'Steve Jobs',
+  //        title: 'Walter Isaacson',
+  //        readingStatus: true
+  //    },
+  //    {
+  //        author: 'Suzanne Collins',
+  //        title:  'Mockingjay: The Final Book of The Hunger Games', 
+  //        readingStatus: false
+  //    }];
+  
+  function displayobj() {
+    var library = [ 
+         {
+             author: 'Bill Gates',
+             title: 'The Road Ahead',
+             readingStatus: true
+         },
+         {
+             author: 'Steve Jobs',
+             title: 'Walter Isaacson',
+             readingStatus: true
+         },
+         {
+             author: 'Suzanne Collins',
+             title:  'Mockingjay: The Final Book of The Hunger Games', 
+             readingStatus: false
+         }];
+  
+         for(let x=0;x<library.length;x++){
+           console.log(library[x].readingStatus);
+         }
+    
+  }
+  displayobj()
+  
+  
+  // program 43
+  // Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes.   
+  // Volume of a cylinder : V = πr2h
+  // where r is the radius and h is the height of the cylinder.
+  
+  function volum(h,r) {
+    var volume,result
+    volume=Math.PI*2*r*h
+    result=volume.toFixed(4)
+    console.log("Volume Of cylinder is:",result);
+  }
+  volum(5,6)
+  
+  // program 44
+  // Write a Bubble Sort algorithm in JavaScript. 
+  
+  function bubleSort() {
+    var array=[6,4,0,67,-3,-2,1]
+     for(let x=0;x<array.length;x++){
+      for(let y=x+1;y<array.length;y++){
+        if (array[y]<array[x]) {
+          var sample=array[x]
+          array[x]=array[y]
+          array[y]=sample
+        }
+      }
+     }
+  console.log(array);
+  }
+  bubleSort()
+  
