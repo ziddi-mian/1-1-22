@@ -535,4 +535,123 @@ function frequency() {
     console.log("After Removing:", char, ",New String Is:", newstring);
   }
   lastAccur("a");
+
   
+
+  // program 23
+// Write a js program to remove all occurrences of a character from string.
+
+function allAccur(char) {
+    var string, h;
+    var newstring = [];
+    newstring[0] = "i love pakistan.pakistan is my country";
+    var g = 0;
+    for (let x = 0; x < newstring[0].length; x++) {
+      if (newstring[g].charAt(x) == char) {
+        {
+          h = g;
+          g++;
+          newstring[g] = newstring[h].replace(char, "");
+        }
+      }
+    }
+  
+    string = newstring[newstring.length - 1];
+    console.log("After Removing All:", char, ",New String Is:", string);
+  }
+  allAccur("a");
+  
+  // program 24
+  // Write a js program to remove all repeated word from a given string.
+  
+  function allword() {
+    var string='i love pakistan.pakistan is,my country.i like it is'
+    var newarray=[]
+    var array=string.split(".")
+    var news=array.join(" ")
+    newarray=news.split(",")
+    var news1=newarray.join(" ")
+    var newarray1=news1.split(" ")
+    for(let x=0;x<newarray1.length;x++){
+      for(let y=x+1;y<newarray1.length;y++)
+            if (newarray1[x]==newarray1[y]) {
+              newarray1.splice(y,1)
+            }
+    }
+    var result=newarray1.join(" ")
+    console.log("yesssssssss",result);
+      }
+  allword()
+  
+  
+  
+  // program 25
+  // Write a js program to replace first occurrence of a character with another in a string.
+  
+  function repelace(t,w) {
+    var string='i love my country pakistan'
+    for(let x=0;x<string.length;x++){
+      if (string.charAt(x)==t) {
+        var news=string.replace(t,w)
+        break
+      }
+    }
+    console.log("After Replacing ",t," With ",w," String is:",news);
+  }
+  repelace("i","You")
+  
+  // program 26
+  // Write a js program to replace last occurrence of a character with another in a string.
+  
+  function repelacelast(t,w) {
+    var string='i love my country pakistan'
+    for(let x=string.length-1;x>=0;x--){
+      var aray=string.split("")
+      if (aray[x]==t) {
+          aray[x]=w
+          var news=aray.join("")
+        break
+      }
+    }
+    console.log("After Replacing ",t," With ",w," String is:",news);
+  }
+  repelacelast("i","a")
+  
+  // program 27
+  // Write a js program to replace all occurrences of a character with another in a string.
+  
+  function repelaceAll(t,w) {
+    var string='i love my pakistan'
+    var aray=string.split("")
+    for(let x=0;x<string.length;x++){
+      if (aray[x]==t) {
+          aray[x]=w
+        }
+      }
+      var news=aray.join("")
+    console.log("After Replacing ",t," With ",w," String is:",news);
+  }
+  repelaceAll("a","x")
+  
+  
+  // program 28
+  // Write a js program to find first occurrence of a word in a given string.
+  
+  function firstWord(f) {
+    var string='I Love My Country Pakistan'
+   var array=string.split(" ")
+   var yess=0
+    for(let x=0;x<array.length;x++){
+           if (array[x]==f) {
+             x++
+             console.log(f," Is Found At Position",x," From Start");
+             yess++
+             break
+           }
+    }
+    if (yess==0) {
+      
+      console.log("Given Word Is Not Found In STring");
+    }
+  }
+  firstWord("I")
