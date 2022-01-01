@@ -1137,3 +1137,202 @@ function subset() {
     console.log(chek);
   }
   leapYear()
+
+
+
+
+  // program 5
+// Write a js program to check whether character is an alphabet or not using conditional operator.
+
+function character() {
+  
+    var char=1
+    var check=char>='a'|| char>='A'?char+" is a Character":char+" Is Not A Character"
+    console.log(check);
+    }
+    character()
+    
+    
+    //                          Switch Statement
+    
+    // program 1
+    // Write a js program to print day of week name using switch case
+    function dayOfWeek(x) {
+      switch (x) {
+        case 1:
+           console.log("Sunday");
+          break;
+        case 2:
+           console.log("Monday");
+          break;
+        case 3:
+           console.log("Tuseday");
+          break;
+        case 4:
+           console.log("Wednesday");
+          break;
+        case 5:
+           console.log("Thursday");
+          break;
+        case 6:
+           console.log("Friday");
+          break;
+        case 7:
+           console.log("Saturday");
+          break;
+      
+        default:
+          console.log("Enter Valid Day Number");
+          break;
+      }
+    }
+    dayOfWeek(6)
+    
+    // program 2
+    // Write a js program print total number of days in a month using switch case.
+    function dayInMonth(x) {
+      switch (x) {
+        case 1:
+          console.log("There Is 31 Days In This Month");
+          break;
+        case 2:
+          console.log("There Is 28 Days In This Month");
+          break;
+        case 3:
+          console.log("There Is 31 Days In This Month");
+          break;
+        case 4:
+          console.log("There Is 30 Days In This Month");
+          break;
+        case 5:
+          console.log("There Is 31 Days In This Month");
+          break;
+        case 6:
+          console.log("There Is 30 Days In This Month");
+          break;
+        case 7:
+          console.log("There Is 31 Days In This Month");
+          break;
+        case 8:
+          console.log("There Is 31 Days In This Month");
+          break;
+        case 9:
+          console.log("There Is 30 Days In This Month");
+          break;
+        case 10:
+          console.log("There Is 31 Days In This Month");
+          break;
+        case 11:
+          console.log("There Is 30 Days In This Month");
+          break;
+        case 12:
+          console.log("There Is 31 Days In This Month");
+          break;
+      
+        default:
+          console.log("Enter Valid Month");
+          break;
+      }
+    }
+    dayInMonth(8)
+    
+    // program 3
+    // Write a js program to check whether an alphabet is vowel or consonant using switch case.
+    function vowel(x) {
+      switch (x) {
+        case 'a':
+          console.log(x," Is Vowel");
+          break;
+        case 'A':
+          console.log(x," Is Vowel");
+          break;
+        case 'e':
+          console.log(x," Is Vowel");
+          break;
+        case 'A':
+          console.log(x," Is Vowel");
+          break;
+        case 'i':
+          console.log(x," Is Vowel");
+          break;
+        case 'I':
+          console.log(x," Is Vowel");
+          break;
+        case 'o':
+          console.log(x," Is Vowel");
+          break;
+        case 'O':
+          console.log(x," Is Vowel");
+          break;
+        case 'u':
+          console.log(x," Is Vowel");
+          break;
+        case 'U':
+          console.log(x," Is Vowel");
+          break;
+      
+        default:
+          console.log(x," Is Consonant");
+          break;
+      }
+      
+    }
+    vowel('k') 
+    
+    // program 4
+    // Write a js program to find maximum between two numbers using switch case.
+    function maximum(x,y) {
+      
+      switch (x>y) {
+        case true:
+          console.log(x," is Greater");
+          break;
+      
+        default:
+          console.log(y," is Greater");
+          break;
+      }
+    }
+    maximum(3,1)
+    
+    // program 5
+    // Write a js program to check whether a number is even or odd using switch case.
+    function Evenodd(x) {
+      switch (x%2==0) {
+        case 1:
+          console.log(x," is even");
+          break;
+      
+        default:
+          console.log(x," is odd");
+          break;
+      }
+      
+    }
+    Evenodd(9)
+    
+    // program 6
+    // Write a js program to check whether a number is positive, negative or zero using switch case.
+    function number1(x) {
+      
+      switch (x > 0) {
+        case true:
+          console.log(x," Is Positive Number");
+          break;
+        case false:
+          switch (x < 0) {
+            case true:
+              console.log(x," is Negative");
+              break;
+          
+            default:
+              console.log(x," is Zero");
+              break;
+          }
+          break;
+          default:
+            console.log("yess");
+            break;
+        }
+    }
+    number1(0)
